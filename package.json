@@ -1,0 +1,39 @@
+{
+  "name": "reactapp",
+  "version": "1.0.0",
+  "description": "dummy react app",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismailkurar/reactapp.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "kurarismail@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ismailkurar/reactapp/issues"
+  },
+  "homepage": "https://github.com/ismailkurar/reactapp#readme",
+  "dependencies": {
+    "express": "4.16.4",
+    "path": "0.12.7",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "html-webpack-plugin": "3.2.0",
+    "webpack": "4.30.0",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "3.3.1"
+  }
+}
