@@ -4,7 +4,9 @@
   "description": "dummy react app",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "clear": "rm -rf dist",
+    "build": "webpack --mode production",
+    "prepare": "npm run clear && npm run build",
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,10 @@
     "express": "4.16.4",
     "path": "0.12.7",
     "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react-dom": "16.8.6",
+    "react-router": "5.0.0",
+    "react-router-dom": "5.0.0",
+    "history": "4.9.0"
   },
   "devDependencies": {
     "babel-core": "6.26.3",
