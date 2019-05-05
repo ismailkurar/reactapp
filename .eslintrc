@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "plugins": ["react", "import", "prettier"],
+  "extends": [
+    "eslint-config-airbnb-base",
+    "eslint-config-airbnb-base/rules/strict",
+    "eslint-config-airbnb/rules/react",
+    "eslint-config-airbnb/rules/react-a11y",
+    "eslint-config-prettier",
+    "eslint-config-prettier/react"
+  ],
+  "rules": {
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": [
+          "routeParams",
+          "location",
+          "params",
+          "route",
+          "router",
+          "routes",
+          "match",
+          "history"
+        ],
+        "customValidators": [],
+        "skipUndeclared": false
+      }
+    ],
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions": [
+      2,
+      {
+        "js": "never",
+        "jsx": "never"
+      }
+    ]
+  }
+}
