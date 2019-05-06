@@ -29,4 +29,14 @@
       color: $white;
     }
   }
+
+  .home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .coming-soon {
+      margin-top: 10px;
+    }
+  }
 }
