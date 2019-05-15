@@ -1,6 +1,6 @@
 import React from 'react';
 
-import csoon from 'img/coming-soon.gif'; // eslint-disable-line
+import Chart from '../components/chart/Chart';
 
 const Home = () => (
   <div className="home-container">
@@ -10,15 +10,42 @@ const Home = () => (
       </div>
     </header>
     <div className="home-content">
-      <div className="chart-container">
-        <div className="chart-title">Lorem ipsum dolor sit amet</div>
-        <div className="chart-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-      </div>
-
+      <Chart
+        title="Lorem ipsum dolor sit amet"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        footer="01 Haziran 2019"
+      />
+      <Chart
+        title="Lorem ipsum dolor sit amet"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        footer="01 Haziran 2019"
+      />
+      <Chart
+        title="Lorem ipsum dolor sit amet"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        footer="01 Haziran 2019"
+      />
+      <Chart
+        title="Lorem ipsum dolor sit amet"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        footer="01 Haziran 2019"
+      />
     </div>
   </div>
 );

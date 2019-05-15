@@ -23,12 +23,13 @@
   },
   "homepage": "https://github.com/ismailkurar/reactapp#readme",
   "dependencies": {
+    "history": "4.9.0",
     "path": "0.12.7",
+    "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-router": "5.0.0",
-    "react-router-dom": "5.0.0",
-    "history": "4.9.0"
+    "react-router-dom": "5.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.2.2",
