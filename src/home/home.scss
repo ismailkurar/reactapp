@@ -1,20 +1,15 @@
 .home-container {
-  background-color: $white;
+  background-color: #F7F7F7;
   min-height: 100%;
 
   .app-header {
     width: 100%;
     height: 70px;
 
-    background-color: $color-primary-2;
-
     display: flex;
     align-items: center;
 
-    padding: 0 24px;
-
     box-shadow: 0 1px 9px 0 rgba(0,0,0,0.76);
-
 
     .logo-container {
       height: 25px;
@@ -25,8 +20,8 @@
 
       font-size: 24px;
       font-weight: bold;
-      background-color: $color-secondary-1-1;
-      color: $white;
+
+      color: #343434;
     }
   }
 
@@ -35,8 +30,32 @@
     align-items: center;
     justify-content: center;
 
-    .coming-soon {
-      margin-top: 10px;
+    padding: 24px;
+
+    .chart-container {
+      min-height: 120px;
+      width: 100%;
+
+      background-color: #FFFFFF;
+
+      padding: 8px;
+
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+
+      .chart-title {
+        color: #00A9DE;
+        font-size: 24px;
+
+        padding: 8px;
+
+        border-bottom: 1px solid #DEDFE0;
+      }
+
+      .chart-content {
+        padding: 8px;
+
+        color: #838688;
+      }
     }
   }
 }

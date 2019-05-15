@@ -7,24 +7,27 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const ASSET_PATTERN = /\.(jpe?g|png|gif|svg|ttf|otf|eot|woff(2)?)(\?v=\d+)?$/;
 const SCSS_PATTERN = /\.scss$/;
+const JS_PATTERN = /\.jsx?$/;
 
-module.exports = () => {
+module.exports = (env) => {
+  const local = env && env.local;
 
-  const config = {
+  return {
+    mode: local ? 'development' : 'production',
     entry: ['App.jsx', 'app.scss'],
     output: {
       filename: `[name].[hash].js`,
       path: path.resolve('dist'),
     },
-    module:{
-      rules:[
+    module: {
+      rules: [
         {
-          test: /\.jsx?$/,
+          test: JS_PATTERN,
           exclude: /node_modules/,
           loader: 'babel-loader'
         },
         {
-          test: /\.jsx?$/,
+          test: JS_PATTERN,
           exclude: /node_modules/,
           enforce: 'pre',
           loader: 'eslint-loader'
@@ -53,15 +56,15 @@ module.exports = () => {
           },
         }]
     },
-    plugins:[
+    plugins: [
       new HWP({
-        template: path.join(__dirname,'src/index.html'),
+        template: path.join(__dirname, 'index.html'),
         filename: 'index.html',
         inject: 'body',
       }),
       new webpack.HashedModuleIdsPlugin(),
       new MiniCssExtractPlugin({
-        filename: '[name].[chunkhash].css',
+        filename: '[name].[hash].css',
       }),
     ],
     resolve: {
@@ -71,8 +74,20 @@ module.exports = () => {
         path.resolve('assets'),
       ],
       extensions: ['.js', '.jsx'],
+    },
+    devServer: {
+      port: '3000',
+      proxy: {
+        [`/local/mw/*`]: {
+          target: '',
+          changeOrigin: true,
+          pathRewrite: { [`^/local/mw/`]: '' },
+        },
+      },
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+      historyApiFallback: true,
     }
   };
-
-  return config;
 };
