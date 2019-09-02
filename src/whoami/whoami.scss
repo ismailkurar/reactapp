@@ -18,5 +18,29 @@
       font-size: 36px;
       color: lightgrey;
     }
+
+    .contacts {
+      height: 50px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .linkedin {
+        > svg {
+          font-size: 34px;
+          color: #ffffff;
+          fill: #0077b5;
+        }
+
+        cursor: pointer;
+
+        &:hover {
+          > svg {
+            font-size: 36px;
+          }
+        }
+      }
+    }
   }
 }
