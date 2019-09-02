@@ -1,26 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Chart = ({ title, footer, content }) => (
-  <div className="chart-container">
+const Chart = ({ title, footer, content, onClick }) => (
+  <button type="button" className="chart-container" onClick={onClick}>
     <div className="chart-title">{title}</div>
     <div className="chart-content">
       {content}
     </div>
     <div className="chart-footer">{footer}</div>
-  </div>
+  </button>
 );
 
 Chart.propTypes = {
   title: PropTypes.string,
   footer: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 Chart.defaultProps = {
   title: '',
   footer: '',
-  content: ''
+  content: '',
+  onClick: null
 };
 
 export default Chart;
