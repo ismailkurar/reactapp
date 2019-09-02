@@ -1,34 +1,24 @@
 import React from 'react';
 
-import Chart from '../components/chart/Chart';
+import { Button } from 'antd';
 
-const Charts = [...Array(1000)].map((_, i) => i);
+import Page from '../components/page/Page';
 
 const Home = ({ history }) => (
-  <div className="home-container">
-    <header className="app-header">
-      <div className="logo-container">
-        ikurar.com
+  <Page>
+    <div className="home-container">
+      <div className="header">
+        <Button
+          type="primary"
+          shape="circle"
+          icon="user"
+          size="large"
+          onClick={() => {history.push('whoami')}}
+        />
+        <span className="text">Who am I ?</span>
       </div>
-    </header>
-    <div className="home-content">
-      {
-        Charts.map((_, i) => (
-          <Chart
-            key={i.toString()}
-            title="Lorem ipsum dolor sit amet"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            footer="01 Haziran 2019"
-            onClick={() => { history.push('/detail') }}
-          />
-        ))
-      }
     </div>
-  </div>
+  </Page>
 );
 
 export default Home;

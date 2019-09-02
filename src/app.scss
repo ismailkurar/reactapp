@@ -2,5 +2,7 @@
 @import 'common/ui/font';
 @import 'common/ui/normalize';
 @import "common/ui/media-queries";
-@import "./components/chart/chart";
+@import '../node_modules/antd/dist/antd.css';
+@import "./components/page/page";
+@import "./whoami/whoami";
 @import "./home/home";
