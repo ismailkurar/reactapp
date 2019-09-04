@@ -8,7 +8,7 @@ const Whoami = () => (
   <Page>
     <div className="whoami-container">
       <div className="title">
-        <div className="name">İsmail Kurar</div>
+        <h3 className="name">İsmail Kurar</h3>
         <div className="job">Senior Frontend Engineer @Commencis</div>
         <div className="contacts">
           <a href="https://www.linkedin.com/in/ikurar/" target="_blank" rel="noopener noreferrer">
