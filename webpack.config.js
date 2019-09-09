@@ -70,6 +70,10 @@ module.exports = (env) => {
     // optimization
     optimization: {
       splitChunks: {
+        chunks: 'all',
+        name: false,
+
+        /*
         cacheGroups: {
           default: false,
           vendors: false,
@@ -93,6 +97,7 @@ module.exports = (env) => {
             enforce: true
           }
         }
+        */
       }
     },
     resolve: {
