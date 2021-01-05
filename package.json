@@ -24,7 +24,7 @@
   "homepage": "https://github.com/ismailkurar/reactapp#readme",
   "dependencies": {
     "antd": "3.22.2",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "history": "4.9.0",
     "path": "0.12.7",
     "prop-types": "15.7.2",
